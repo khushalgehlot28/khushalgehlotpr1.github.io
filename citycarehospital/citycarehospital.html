@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Care Hospital</title>
+
+<link rel="stylesheet" href="citycarehospital-style.css">
+</head>
+
+<body>
+
+    <!-- Emergency Bar -->
+    <div class="emergency">
+        Emergency Services Available 24/7 -
+        <a href="tel:9876543210">9876543210</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">+ City Care Hospital</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#services">Services</a>
+            <a href="#explore">Explore</a>
+            <a href="#bill">Bill</a>
+            <a href="#appointment">Book</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <div class="hero" id="home">
+        <!-- Task 2: dynamic greeting -->
+        <p class="greeting" id="greeting" aria-live="polite"></p>
+        <h1>Quality Healthcare for Everyone</h1>
+        <p>
+            Modern healthcare facilities with experienced doctors
+            and trained medical staff.
+        </p>
+    </div>
+
+    <!-- Show / Hide Toggles (Task 4) -->
+    <div class="toggle-bar">
+        <strong>Show / hide:</strong>
+        <button class="toggle-btn" data-target="about" aria-pressed="true">About Us</button>
+        <button class="toggle-btn" data-target="doctors" aria-pressed="true">Departments</button>
+        <button class="toggle-btn" data-target="services" aria-pressed="true">Emergency</button>
+        <button class="toggle-btn" data-target="contactInfo" aria-pressed="true">Contact Info</button>
+    </div>
+
+    <!-- About Section -->
+    <section class="collapsible" id="about">
+        <h2>About City Care Hospital</h2>
+
+        <div class="about">
+            <p>
+                City Care Hospital provides modern healthcare facilities
+                with experienced doctors and trained medical staff.
+            </p>
+
+            <p>
+                Our aim is to provide safe, affordable and quality
+                healthcare services to everyone.
+            </p>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="collapsible" id="doctors">
+        <h2>Our Departments</h2>
+
+        <div class="departments">
+
+            <div class="card">
+                <h3>♥</h3>
+                <h3>Cardiology</h3>
+                <p>Heart related treatment.</p>
+            </div>
+
+            <div class="card">
+                <h3>◎</h3>
+                <h3>Neurology</h3>
+                <p>Brain and nervous system care.</p>
+            </div>
+
+            <div class="card">
+                <h3>✚</h3>
+                <h3>Orthopedics</h3>
+                <p>Bone and joint treatment.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚕</h3>
+                <h3>General Medicine</h3>
+                <p>General health treatment.</p>
+            </div>
+
+            <div class="card">
+                <h3>☺</h3>
+                <h3>Pediatrics</h3>
+                <p>Healthcare for children.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="collapsible" id="services">
+        <h2>Emergency Services</h2>
+
+        <div class="emergency-box">
+            <h3>24/7 Emergency Services</h3>
+
+            <p>
+                Our emergency department is available
+                24 hours a day and 7 days a week.
+            </p>
+
+            <div class="phone">
+                Call: 9876543210
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Explorer (Task 5) -->
+    <section id="explore">
+        <h2>Explore Our Departments</h2>
+        <div class="explorer" id="explorer">
+            <img id="deptImg" alt="">
+            <div class="explorer-body">
+                <label for="deptSelect"><strong>Choose a department</strong></label>
+                <select id="deptSelect"></select>
+                <h3 id="deptTitle"></h3>
+                <p id="deptDesc"></p>
+                <ul id="deptPoints"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bill Estimator (Task 3) -->
+    <section id="bill">
+        <h2>Treatment Bill Estimator</h2>
+        <div class="bill-wrap">
+            <div class="bill-card">
+                <div class="bill-row bill-head"><span>Service</span><span>Price</span><span>Qty</span></div>
+                <div id="billRows"></div>
+                <label class="bill-check">
+                    <input type="checkbox" id="seniorDiscount"> Senior citizen discount (10% off)
+                </label>
+            </div>
+            <div class="bill-card">
+                <h3>Bill Summary</h3>
+                <div id="billSummary" aria-live="polite"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form (Task 1) -->
+    <section id="appointment">
+        <h2>Book an Appointment</h2>
+        <form class="form-card" id="appointmentForm" novalidate>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id="age" inputmode="numeric" placeholder="Patient age">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Create Password (for the patient portal)</label>
+                <input type="password" id="password" placeholder="Min 8 characters" autocomplete="new-password">
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department">
+                    <option value="">Select a department</option>
+                    <option>Cardiology</option>
+                    <option>Neurology</option>
+                    <option>Orthopedics</option>
+                    <option>General Medicine</option>
+                    <option>Pediatrics</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Request Appointment</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <div class="collapsible" id="contactInfo">
+            <p>City Care Hospital</p>
+            <p>Contact: 9876543210</p>
+        </div>
+        <p>© 2026 City Care Hospital</p>
+    </footer>
+
+    <script src="citycare.js"></script>
+
+</body>
+</html>

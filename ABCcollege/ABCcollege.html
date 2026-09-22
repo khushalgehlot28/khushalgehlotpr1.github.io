@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABC College of Technology</title>
+
+<link rel="stylesheet" href="abccollege-style.css">
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                ABC <span>College</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#fees">Fees</a></li>
+                    <li><a href="#admission">Admission</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <!-- Task 2: dynamic greeting -->
+            <p class="greeting" id="greeting" aria-live="polite"></p>
+
+            <h1>
+                Welcome to
+                <span>ABC College</span>
+            </h1>
+
+            <p>
+                ABC College of Technology provides quality education
+                in Computer Science, Information Technology and Management.
+            </p>
+
+            <a href="#courses" class="btn">
+                Explore Courses
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SHOW / HIDE TOGGLES (Task 4) ================= -->
+
+    <div class="toggle-bar">
+        <strong>Show / hide:</strong>
+        <button class="toggle-btn" data-target="about" aria-pressed="true">About Us</button>
+        <button class="toggle-btn" data-target="courses" aria-pressed="true">Courses</button>
+        <button class="toggle-btn" data-target="contactInfo" aria-pressed="true">Contact Info</button>
+    </div>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about collapsible" id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>About Us</h2>
+
+                <p>
+                    Learn more about our college
+                </p>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <h3>ABC College of Technology</h3>
+
+                    <p>
+                        ABC College of Technology is an educational
+                        institution focused on providing quality education
+                        and developing technical skills among students.
+                    </p>
+
+                    <p>
+                        Our college provides a friendly learning environment
+                        where students can improve their knowledge,
+                        communication skills and practical abilities.
+                    </p>
+
+                    <p>
+                        We encourage students to learn new technologies
+                        and prepare themselves for future careers.
+                    </p>
+
+                </div>
+
+
+                <div class="about-box">
+
+                    <h3>Our Goal</h3>
+
+                    <p>
+                        To provide quality education and create skilled,
+                        responsible and innovative professionals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COURSES ================= -->
+
+    <section class="collapsible" id="courses">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Courses</h2>
+
+                <p>
+                    Choose a programme according to your interest
+                </p>
+
+            </div>
+
+
+            <div class="course-container">
+
+
+                <!-- BCA -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        BCA
+                    </div>
+
+                    <h3>Bachelor of Computer Applications</h3>
+
+                    <p>
+                        Learn programming, databases, web development
+                        and computer applications.
+                    </p>
+
+                </div>
+
+
+                <!-- MCA -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        MCA
+                    </div>
+
+                    <h3>Master of Computer Applications</h3>
+
+                    <p>
+                        Advanced study of software development,
+                        programming and computer technology.
+                    </p>
+
+                </div>
+
+
+                <!-- BTECH -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        B.Tech
+                    </div>
+
+                    <h3>B.Tech Computer Science</h3>
+
+                    <p>
+                        Study computer science, algorithms,
+                        software and engineering concepts.
+                    </p>
+
+                </div>
+
+
+                <!-- MTECH -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        M.Tech
+                    </div>
+
+                    <h3>M.Tech Computer Science</h3>
+
+                    <p>
+                        Advanced technical education with
+                        research and specialised computing.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROGRAM EXPLORER (Task 5) ================= -->
+
+    <section id="explore">
+        <div class="container">
+            <div class="section-title">
+                <h2>Program Explorer</h2>
+                <p>Pick a programme to see its details</p>
+            </div>
+
+            <div class="explorer" id="explorer">
+                <img id="programImg" alt="">
+                <div class="explorer-body">
+                    <label for="programSelect"><strong>Choose a programme</strong></label>
+                    <select id="programSelect"></select>
+                    <h3 id="programTitle"></h3>
+                    <p id="programDesc"></p>
+                    <ul id="programPoints"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= FEE ESTIMATOR (Task 3) ================= -->
+
+    <section id="fees">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fee Estimator</h2>
+                <p>Change the quantities and watch your bill update</p>
+            </div>
+
+            <div class="bill-wrap">
+                <div class="bill-card">
+                    <div class="bill-row bill-head"><span>Item</span><span>Price</span><span>Qty</span></div>
+                    <div id="billRows"></div>
+                    <label class="bill-check">
+                        <input type="checkbox" id="earlyBird"> Early-bird admission (10% off)
+                    </label>
+                </div>
+
+                <div class="bill-card">
+                    <h3>Bill Summary</h3>
+                    <div id="billSummary" aria-live="polite"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= ADMISSION ================= -->
+
+    <section class="admission" id="admission">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Admission 2026-27</h2>
+
+            </div>
+
+            <p>
+                Admissions are open for various undergraduate and
+                postgraduate programmes. Contact our admission office
+                for more information.
+            </p>
+
+            <a href="#contact" class="btn">
+                Apply / Enquire Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Get in touch with our college
+                </p>
+
+            </div>
+
+
+            <div class="contact-container">
+
+
+                <!-- Contact Information -->
+
+                <div class="contact-info collapsible" id="contactInfo">
+
+                    <h3>ABC College of Technology</h3>
+
+                    <p>
+                        📍 College Road, Jaipur, Rajasthan
+                    </p>
+
+                    <p>
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p>
+                        📧 info@abccollege.com
+                    </p>
+
+                    <p>
+                        🕐 Monday - Saturday: 9:00 AM - 5:00 PM
+                    </p>
+
+                </div>
+
+
+                <!-- Contact Form -->
+
+                <form class="contact-form" id="contactForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="text" id="age" inputmode="numeric" placeholder="Your age">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Create Password (to track your application)</label>
+                        <input type="password" id="password" placeholder="Min 8 characters" autocomplete="new-password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Select Course</label>
+                        <select id="course">
+                            <option value="">Select a course</option>
+                            <option>BCA</option>
+                            <option>MCA</option>
+                            <option>B.Tech</option>
+                            <option>M.Tech</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Write your message"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Send Enquiry</button>
+                    <p class="form-status" id="formStatus" role="status"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © <span id="year"></span>
+            ABC College of Technology
+        </p>
+
+        <p>
+            MCA 1st Semester HTML Project
+        </p>
+
+    </footer>
+
+<script src="script.js"></script>
+    
+</body>
+
+</html>

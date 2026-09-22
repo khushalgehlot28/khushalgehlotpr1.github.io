@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department of Computer Science — XYZ University</title>
+<meta name="description" content="Department of Computer Science, XYZ University — programs, faculty, and notices.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="departmentofcomputersci-style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">CS</span>
+      <span class="brand-text">
+        <span class="dept" style="display:block;">Computer Science</span>
+        <span class="univ">XYZ UNIVERSITY</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#programs">Courses</a></li>
+      <li><a href="#explore">Explore</a></li>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <div id="top"></div>
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap">
+      <!-- Task 2: dynamic greeting -->
+      <p class="hero-greeting" id="greeting" aria-live="polite"></p>
+      <p class="hero-kicker">Est. department of computing &amp; research</p>
+      <h1 id="hero-heading">Department of Computer Science</h1>
+      <p class="univ-line"><strong>XYZ University</strong> · Jaipur, Rajasthan</p>
+      <p class="hero-intro">
+        We provide quality education and build technical and problem-solving
+        skills among students, preparing graduates for careers across
+        software engineering, data science, and research.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat"><div class="n">4</div><div class="l">Degree programs</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">Core faculty</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">Open notices</div></div>
+        <div class="stat"><div class="n">2026</div><div class="l">Current session</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task 4: show / hide toggles -->
+  <div class="toggle-strip">
+    <div class="wrap toggle-bar">
+      <span class="label">Show / hide:</span>
+      <button class="toggle-btn" data-target="about" aria-pressed="true">About Us</button>
+      <button class="toggle-btn" data-target="programs" aria-pressed="true">Programs</button>
+      <button class="toggle-btn" data-target="faculty" aria-pressed="true">Faculty</button>
+      <button class="toggle-btn" data-target="notices" aria-pressed="true">Notices</button>
+      <button class="toggle-btn" data-target="contactInfo" aria-pressed="true">Contact Info</button>
+    </div>
+  </div>
+
+  <section id="about" class="collapsible" aria-labelledby="about-heading">
+    <div class="wrap">
+      <div class="eyebrow-rule"><span class="num">01</span><span class="line"></span></div>
+      <div class="section-head">
+        <h2 id="about-heading">Welcome to the department</h2>
+      </div>
+
+      <div class="about-grid">
+        <p>
+          The Department of Computer Science provides quality education
+          and develops technical and problem-solving skills among students.
+          Our teaching combines strong theoretical foundations with applied,
+          project-based learning across core areas of the discipline.
+        </p>
+
+        <div class="fact-card">
+          <h3>At a glance</h3>
+          <ul class="fact-list">
+            <li><span>Location</span><span>Jaipur, Rajasthan</span></li>
+            <li><span>Programs</span><span>UG &amp; PG</span></li>
+            <li><span>Faculty</span><span>3 members</span></li>
+            <li><span>Contact</span><span>cs@xyzuniversity.edu</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="collapsible" aria-labelledby="programs-heading">
+    <div class="wrap">
+      <div class="eyebrow-rule"><span class="num">02</span><span class="line"></span></div>
+      <div class="section-head">
+        <h2 id="programs-heading">Programs offered</h2>
+        <p class="section-note">Undergraduate and postgraduate degrees in computing.</p>
+      </div>
+
+      <div class="program-grid">
+        <article class="program-card">
+          <div class="program-top">
+            <h3>BCA</h3>
+            <span class="program-level">Undergraduate</span>
+          </div>
+          <p>Bachelor of Computer Applications — foundational programming, systems, and software development.</p>
+        </article>
+
+        <article class="program-card">
+          <div class="program-top">
+            <h3>MCA</h3>
+            <span class="program-level">Postgraduate</span>
+          </div>
+          <p>Master of Computer Applications — advanced application development and computing practice.</p>
+        </article>
+
+        <article class="program-card">
+          <div class="program-top">
+            <h3>B.Tech Computer Science</h3>
+            <span class="program-level">Undergraduate</span>
+          </div>
+          <p>Engineering degree covering algorithms, systems, and core computer science theory.</p>
+        </article>
+
+        <article class="program-card">
+          <div class="program-top">
+            <h3>M.Tech Computer Science</h3>
+            <span class="program-level">Postgraduate</span>
+          </div>
+          <p>Research-oriented graduate degree with focus areas across specialised computing tracks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task 5: program explorer -->
+  <section id="explore" aria-labelledby="explore-heading">
+    <div class="wrap">
+      <div class="eyebrow-rule"><span class="num">03</span><span class="line"></span></div>
+      <div class="section-head">
+        <h2 id="explore-heading">Explore a program</h2>
+        <p class="section-note">Pick a program to see its details.</p>
+      </div>
+
+      <div class="explorer" id="explorer">
+        <img id="programImg" alt="">
+        <div class="explorer-body">
+          <label for="programSelect">Choose a program</label>
+          <select id="programSelect"></select>
+          <h3 id="programTitle"></h3>
+          <p id="programDesc"></p>
+          <ul id="programPoints"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task 3: fee estimator -->
+  <section id="fees" aria-labelledby="fees-heading">
+    <div class="wrap">
+      <div class="eyebrow-rule"><span class="num">04</span><span class="line"></span></div>
+      <div class="section-head">
+        <h2 id="fees-heading">Fee estimator</h2>
+        <p class="section-note">Change the quantities and the bill updates instantly.</p>
+      </div>
+
+      <div class="bill-wrap">
+        <div class="bill-card">
+          <div class="bill-row bill-head"><span>Item</span><span>Price</span><span>Qty</span></div>
+          <div id="billRows"></div>
+          <label class="bill-check">
+            <input type="checkbox" id="scholarship"> Merit scholarship (10% off)
+          </label>
+        </div>
+        <div class="bill-card">
+          <h3>Bill summary</h3>
+          <div id="billSummary" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faculty" class="collapsible" aria-labelledby="faculty-heading">
+    <div class="wrap">
+      <div class="eyebrow-rule"><span class="num">05</span><span class="line"></span></div>
+      <div class="section-head">
+        <h2 id="faculty-heading">Faculty members</h2>
+        <p class="section-note">Meet the people teaching and guiding our programs.</p>
+      </div>
+
+      <ul class="faculty-list">
+        <li class="faculty-item">
+          <span class="faculty-avatar" aria-hidden="true">AS</span>
+          <span class="faculty-name">Dr. Amit Sharma</span>
+          <span class="faculty-role">Professor</span>
+          <span class="faculty-spec"><span>Artificial Intelligence</span></span>
+        </li>
+        <li class="faculty-item">
+          <span class="faculty-avatar" aria-hidden="true">NV</span>
+          <span class="faculty-name">Dr. Neha Verma</span>
+          <span class="faculty-role">Associate Professor</span>
+          <span class="faculty-spec"><span>Data Science</span></span>
+        </li>
+        <li class="faculty-item">
+          <span class="faculty-avatar" aria-hidden="true">RS</span>
+          <span class="faculty-name">Mr. Rahul Singh</span>
+          <span class="faculty-role">Assistant Professor</span>
+          <span class="faculty-spec"><span>Computer Networks</span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="notices" class="collapsible" aria-labelledby="notices-heading">
+    <div class="wrap">
+      <div class="notice-panel">
+        <div class="eyebrow-rule"><span class="num">06</span><span class="line"></span></div>
+        <div class="section-head">
+          <h2 id="notices-heading">Important notices</h2>
+          <p class="section-note">Current announcements for students.</p>
+        </div>
+
+        <ol class="notice-list">
+          <li class="notice-item">
+            <span class="notice-num" aria-hidden="true">1</span>
+            <p>Mid-term examinations will begin from 15 September.</p>
+          </li>
+          <li class="notice-item">
+            <span class="notice-num" aria-hidden="true">2</span>
+            <p>Students must submit their assignments before the deadline.</p>
+          </li>
+          <li class="notice-item">
+            <span class="notice-num" aria-hidden="true">3</span>
+            <p>Registration for the seminar is now open.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-heading" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="eyebrow-rule"><span class="num">07</span><span class="line"></span></div>
+      <div class="section-head">
+        <h2 id="contact-heading">Contact us</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-block collapsible" id="contactInfo">
+          <address>
+            <strong>Department of Computer Science</strong><br>
+            XYZ University<br>
+            Jaipur, Rajasthan
+          </address>
+          <a class="email" href="mailto:cs@xyzuniversity.edu">cs@xyzuniversity.edu</a>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" inputmode="numeric">
+          </div>
+          <div class="field">
+            <label for="password">Create password (to track your enquiry)</label>
+            <input type="password" id="password" name="password" placeholder="Min 8 characters" autocomplete="new-password">
+          </div>
+          <div class="field">
+            <label for="program">Program of interest</label>
+            <select id="program" name="program">
+              <option value="">Select a program</option>
+              <option>BCA</option>
+              <option>MCA</option>
+              <option>B.Tech</option>
+              <option>M.Tech</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>&copy; 2026  University</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="dept.js"></script>
+
+</body>
+</html>

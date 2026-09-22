@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Corner Restaurant</title>
+
+<link rel="stylesheet" href="foodcorner-style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🍴 Food Corner</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#dishes">Dishes</a>
+            <a href="#order">Order</a>
+            <a href="#about">About Us</a>
+            <a href="#gallery">Categories</a>
+            <a href="#signup">Join</a>
+            <!-- data-opens tells foodcorner.js to also expand that panel -->
+            <a href="#contact-section" data-opens="contactPanel">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- TASK 2: Dynamic greeting (filled in by foodcorner.js) -->
+    <div class="greeting-bar" id="greetingBar" aria-live="polite">
+        <span id="greetingIcon" aria-hidden="true">🍴</span>
+        <strong id="greetingText">Welcome to Food Corner</strong>
+        <span id="greetingSub"></span>
+    </div>
+
+
+    <!-- Home Section -->
+    <div class="hero" id="home">
+        <h1>Delicious Food</h1>
+        <h2>Great Taste</h2>
+        <h1>Happy Moments</h1>
+
+        <p>Fresh and delicious food for everyone.</p>
+
+        <a href="#menu" class="button">See Today's Menu</a>
+    </div>
+
+
+    <!-- About Section (TASK 4: can be shown / hidden) -->
+    <section id="about">
+        <h2>Welcome to Food Corner</h2>
+
+        <div class="toggle-bar">
+            <button type="button" class="button toggle-btn" data-target="aboutPanel" data-label="About Us" aria-expanded="true" aria-controls="aboutPanel">Hide About Us</button>
+        </div>
+
+        <div class="collapsible open" id="aboutPanel">
+            <div class="collapsible-inner">
+                <div class="about">
+                    <p>
+                        Welcome to Food Corner Restaurant.
+                        We serve fresh, delicious and hygienic food
+                        for our customers.
+                    </p>
+
+                    <p>
+                        Our menu includes Indian food, Italian food,
+                        fast food and refreshing beverages.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Special Menu</h2>
+
+        <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+
+                <tr>
+                    <td>Pizza</td>
+                    <td>
+                        <span class="category italian">Italian</span>
+                    </td>
+                    <td>₹250</td>
+                </tr>
+
+                <tr>
+                    <td>Paneer Tikka</td>
+                    <td>
+                        <span class="category indian">Indian</span>
+                    </td>
+                    <td>₹180</td>
+                </tr>
+
+                <tr>
+                    <td>Veg Burger</td>
+                    <td>
+                        <span class="category fastfood">Fast Food</span>
+                    </td>
+                    <td>₹120</td>
+                </tr>
+
+                <tr>
+                    <td>Cold Coffee</td>
+                    <td>
+                        <span class="category beverage">Beverage</span>
+                    </td>
+                    <td>₹100</td>
+                </tr>
+
+                <tr>
+                    <td>Pasta Alfredo</td>
+                    <td>
+                        <span class="category italian">Italian</span>
+                    </td>
+                    <td>₹220</td>
+                </tr>
+
+                <tr>
+                    <td>Veg Biryani</td>
+                    <td>
+                        <span class="category indian">Indian</span>
+                    </td>
+                    <td>₹200</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <!-- TASK 5: Dynamic content and image changing -->
+    <section id="dishes">
+        <h2>Explore Our Dishes</h2>
+        <p class="section-note">Choose a dish to see its picture, description and price.</p>
+
+        <div class="showcase-controls">
+            <label for="dishSelect"><strong>Dish:</strong></label>
+            <select id="dishSelect"></select>
+            <button type="button" class="button secondary" id="nextDishBtn">Next dish</button>
+        </div>
+
+        <div class="showcase" id="showcaseCard">
+            <img id="dishImage" alt="" width="260" height="260">
+            <div>
+                <span class="category" id="dishCategory"></span>
+                <h3 id="dishTitle"></h3>
+                <p id="dishDescription"></p>
+                <p class="showcase-price" id="dishPrice"></p>
+                <button type="button" class="button" id="addToOrderBtn">Add to order</button>
+                <p class="helper-text" id="addToOrderNote" role="status"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TASK 3: Dynamic bill -->
+    <section id="order">
+        <h2>Build Your Order</h2>
+        <p class="section-note">Set quantities and your bill updates instantly.</p>
+
+        <div class="bill-layout">
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="billBody"></tbody>
+                </table>
+            </div>
+
+            <aside class="bill-summary" aria-live="polite">
+                <h3>Bill summary</h3>
+                <ul class="bill-items" id="billItems"></ul>
+                <div class="bill-line"><span>Subtotal</span><span id="billSubtotal">₹0</span></div>
+                <div class="bill-line"><span>GST (5%)</span><span id="billTax">₹0</span></div>
+                <div class="bill-line"><span>Delivery</span><span id="billDelivery">₹0</span></div>
+                <div class="bill-line bill-total"><span>Total</span><span id="billTotal">₹0</span></div>
+
+                <label class="bill-option">
+                    Service type
+                    <select id="serviceType">
+                        <option value="dinein">Dine-in</option>
+                        <option value="takeaway">Takeaway</option>
+                        <option value="delivery">Home delivery</option>
+                    </select>
+                </label>
+                <p class="helper-text">Delivery is ₹40, free on food orders of ₹500 or more.</p>
+                <button type="button" class="button secondary" id="clearBillBtn">Clear order</button>
+            </aside>
+        </div>
+    </section>
+
+
+    <!-- Categories Section -->
+    <section id="gallery">
+        <h2>Food Categories</h2>
+
+        <div class="categories">
+
+            <div class="card">
+                <h3>🍕 Italian</h3>
+                <p>Pizza and other Italian dishes.</p>
+            </div>
+
+            <div class="card">
+                <h3>🍛 Indian</h3>
+                <p>Paneer Tikka and Indian dishes.</p>
+            </div>
+
+            <div class="card">
+                <h3>🍔 Fast Food</h3>
+                <p>Fresh and tasty burgers.</p>
+            </div>
+
+            <div class="card">
+                <h3>☕ Beverages</h3>
+                <p>Cold Coffee and refreshing drinks.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TASK 1: Sign-up form with validation -->
+    <section id="signup">
+        <h2>Join the Food Corner Club</h2>
+        <p class="section-note">Sign up for offers and new dishes.</p>
+
+        <form id="signupForm" novalidate>
+            <div class="form-grid">
+                <div class="field">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Aarav Sharma">
+                    <p class="field-error" id="nameError" role="alert"></p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+                    <p class="field-error" id="emailError" role="alert"></p>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number">
+                    <p class="field-error" id="phoneError" role="alert"></p>
+                </div>
+
+                <div class="field">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="13" max="100" placeholder="e.g. 21">
+                    <p class="field-error" id="ageError" role="alert"></p>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-wrap">
+                        <input type="password" id="password" name="password" autocomplete="new-password" placeholder="Create a password">
+                        <button type="button" class="toggle-pass" data-target="password" aria-label="Show password">Show</button>
+                    </div>
+                    <p class="helper-text">8+ characters with uppercase, lowercase and a number.</p>
+                    <p class="field-error" id="passwordError" role="alert"></p>
+                </div>
+
+                <div class="field">
+                    <label for="confirmPassword">Confirm password</label>
+                    <div class="password-wrap">
+                        <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" placeholder="Re-enter your password">
+                        <button type="button" class="toggle-pass" data-target="confirmPassword" aria-label="Show confirm password">Show</button>
+                    </div>
+                    <p class="field-error" id="confirmPasswordError" role="alert"></p>
+                </div>
+
+                <div class="form-message" id="formMessage" role="status"></div>
+
+                <div class="form-actions">
+                    <button type="submit" class="button">Join now</button>
+                    <button type="reset" class="button secondary">Clear form</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- Contact section (TASK 4: can be shown / hidden) -->
+    <section id="contact-section">
+        <h2>Contact Us</h2>
+
+        <div class="toggle-bar">
+            <button type="button" class="button toggle-btn" data-target="contactPanel" data-label="Contact Info" aria-expanded="false" aria-controls="contactPanel">Show Contact Info</button>
+        </div>
+
+        <div class="collapsible" id="contactPanel">
+            <div class="collapsible-inner">
+                <div class="contact-box">
+                    <p><strong>Phone:</strong> +91 98765 43210</p>
+                    <p><strong>Email:</strong> hello@foodcorner.example</p>
+                    <p><strong>Hours:</strong> Monday - Sunday, 11:00 AM - 10:00 PM</p>
+                    <p><strong>Address:</strong> 12 Market Road, Your City</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h3>Food Corner Restaurant</h3>
+
+        <p>Fresh, Delicious and Hygienic Food</p>
+
+        <p>Opening Hours: Monday - Sunday, 11:00 AM - 10:00 PM</p>
+
+        <p>© 2026 Food Corner Restaurant</p>
+    </footer>
+
+    <script src="foodcorner.js"></script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+
+        /* ---------- BASIC RESET ---------- */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background-color: #14213d;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #fca311;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fca311;
+        }
+
+        /* ---------- HERO SECTION ---------- */
+
+        .hero {
+            min-height: 85vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background: linear-gradient(
+                135deg,
+                #14213d,
+                #1d3557
+            );
+
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease;
+        }
+
+        .hero h1 span {
+            color: #fca311;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #e5e5e5;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #fca311;
+            color: #14213d;
+
+            padding: 12px 25px;
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ---------- COMMON SECTION ---------- */
+
+        section {
+            padding: 70px 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #14213d;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 26px;
+            color: #14213d;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .about-box {
+            flex: 1;
+
+            background-color: #14213d;
+            color: white;
+
+            padding: 40px;
+            border-radius: 10px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .about-box:hover {
+            transform: scale(1.03);
+        }
+
+        .about-box h3 {
+            color: #fca311;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- COURSES ---------- */
+
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .course-card {
+            background-color: white;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 8px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-icon {
+            width: 60px;
+            height: 60px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #14213d;
+            color: #fca311;
+
+            border-radius: 50%;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .course-card h3 {
+            color: #14213d;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ---------- ADMISSION ---------- */
+
+        .admission {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+        }
+
+        .admission h2 {
+            color: white;
+        }
+
+        .admission p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #ddd;
+        }
+
+        /* ---------- CONTACT ---------- */
+
+        .contact {
+            background-color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            color: #14213d;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .contact-form {
+            flex: 1;
+
+            background-color: #f4f6f8;
+
+            padding: 30px;
+
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 11px;
+
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 15px;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #0b132b;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            color: #ccc;
+        }
+
+        footer span {
+            color: #fca311;
+        }
+
+        /* ---------- ANIMATIONS ---------- */
+
+        @keyframes slideDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+
+        /* ---------- RESPONSIVE DESIGN ---------- */
+
+        @media (max-width: 900px) {
+
+            .course-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content,
+            .contact-container {
+                flex-direction: column;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .course-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+        }
+
+            /* ---------- NEW: GREETING ---------- */
+
+        .hero .greeting {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fca311;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- NEW: SHOW / HIDE ---------- */
+
+        .toggle-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            background: white;
+            border-bottom: 1px solid #e3e6ea;
+        }
+
+        .toggle-btn {
+            border: 2px solid #14213d;
+            background: white;
+            color: #14213d;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .toggle-btn[aria-pressed="true"] {
+            background: #14213d;
+            color: white;
+        }
+
+        /* Collapsible = fade + slide (max-height) transition */
+        .collapsible {
+            max-height: 2000px;
+            overflow: hidden;
+            transition: max-height 0.6s ease, opacity 0.5s ease,
+                        padding 0.6s ease, flex 0.5s ease;
+        }
+
+        .collapsible.collapsed {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            visibility: hidden;
+            transition: max-height 0.6s ease, opacity 0.5s ease,
+                        padding 0.6s ease, flex 0.5s ease,
+                        visibility 0s linear 0.6s;
+        }
+
+        .contact-info.collapsed {
+            flex: 0;
+            min-width: 0;
+        }
+
+        /* ---------- NEW: FORM VALIDATION ---------- */
+
+        .form-group input.invalid,
+        .form-group select.invalid,
+        .form-group textarea.invalid {
+            border-color: #d62828;
+        }
+
+        .form-group input.valid,
+        .form-group select.valid,
+        .form-group textarea.valid {
+            border-color: #2a9d8f;
+        }
+
+        .error-msg {
+            display: block;
+            color: #d62828;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .form-status {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 5px;
+            background: #e6f6f0;
+            color: #1b6b57;
+        }
+
+        .form-status.show {
+            display: block;
+        }
+
+        /* ---------- NEW: PROGRAM EXPLORER ---------- */
+
+        .explorer,
+        .bill-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .explorer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .explorer img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .explorer img,
+        .explorer-body {
+            transition: opacity 0.25s ease;
+        }
+
+        .explorer.fading img,
+        .explorer.fading .explorer-body {
+            opacity: 0;
+        }
+
+        .explorer select {
+            width: 100%;
+            padding: 11px;
+            margin: 8px 0 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .explorer h3 {
+            color: #14213d;
+            margin-bottom: 8px;
+        }
+
+        .explorer ul {
+            margin: 12px 0 0 20px;
+            color: #555;
+        }
+
+        /* ---------- NEW: FEE ESTIMATOR ---------- */
+
+        .bill-wrap {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 25px;
+        }
+
+        .bill-card h3 {
+            color: #14213d;
+            margin-bottom: 12px;
+        }
+
+        .bill-row {
+            display: grid;
+            grid-template-columns: 1fr 90px 80px;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .bill-head {
+            font-weight: bold;
+            color: #14213d;
+        }
+
+        .bill-row input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .bill-check {
+            display: block;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .bill-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            color: #555;
+        }
+
+        .bill-total {
+            font-weight: bold;
+            font-size: 20px;
+            color: #14213d;
+            border-top: 2px solid #14213d;
+            margin-top: 8px;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 900px) {
+            .explorer,
+            .bill-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    
